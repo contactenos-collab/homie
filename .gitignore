@@ -1,0 +1,32 @@
+# Cloudflare / Wrangler (caché local con datos de la cuenta)
+.wrangler/
+.dev.vars
+.dev.vars.*
+
+# Secretos y credenciales
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*token*
+*secret*
+credentials*.json
+service-account*.json
+
+# Dependencias y builds
+node_modules/
+dist/
+.cache/
+
+# Sistema y editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.log
+*.tmp
+*.swp
