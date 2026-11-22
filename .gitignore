@@ -1,3 +1,13 @@
+# Dependencias y compilación
+node_modules
+dist
+dist-ssr
+.output
+.vinxi
+.tanstack/**
+.nitro
+*.local
+
 # Cloudflare / Wrangler (caché local con datos de la cuenta)
 .wrangler/
 .dev.vars
@@ -11,22 +21,19 @@
 *.key
 *.p12
 *.pfx
-*token*
-*secret*
 credentials*.json
 service-account*.json
 
-# Dependencias y builds
-node_modules/
-dist/
-.cache/
+# Logs
+logs
+*.log
+npm-debug.log*
 
 # Sistema y editores
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
 Thumbs.db
 desktop.ini
-.vscode/
-.idea/
-*.log
-*.tmp
-*.swp
+*.sw?

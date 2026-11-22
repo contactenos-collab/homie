@@ -1,0 +1,13 @@
+{
+  // Worker de Cloudflare que sirve holahomi.com y www.holahomi.com.
+  // "wrangler deploy" compila primero (npm run build -> Nitro genera .output/) y luego sube el resultado.
+  "name": "homie",
+  "compatibility_date": "2026-11-17",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": ".output/server/index.mjs",
+  "no_bundle": true,
+  "rules": [{ "type": "ESModule", "globs": ["**/*.mjs", "**/*.js"] }],
+  "assets": { "binding": "ASSETS", "directory": ".output/public" },
+  "build": { "command": "npm run build" },
+  "observability": { "enabled": true }
+}

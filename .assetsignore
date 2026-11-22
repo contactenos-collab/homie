@@ -1,8 +1,0 @@
-# Archivos del repositorio que NO deben publicarse en holahomi.com
-.git
-.gitignore
-.assetsignore
-*.md
-wrangler.json
-wrangler.jsonc
-wrangler.toml
