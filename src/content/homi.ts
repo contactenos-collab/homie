@@ -11,7 +11,7 @@ import heroPhoto from "@/assets/hero-estudiantes.jpg";
  *  Para cambiarla, cambia solo la ruta del import de arriba y pon isReal: true. */
 export const heroImage = { src: heroPhoto, width: 516, height: 381, alt: "Imagen ilustrativa de estudiantes en un piso compartido", isReal: false };
 
-export const WHATSAPP_NUMBER = "50688884433";
+export const WHATSAPP_NUMBER = "34680991270";
 export const CONTACT_EMAIL = ""; // PENDIENTE
 export const PRICES_VALIDATED = false; // Cambiar a true cuando Valeria apruebe las tarifas
 
