@@ -5,11 +5,14 @@ import { meta, WhatsAppButton } from "@/components/site";
 import { ServiceCards, HowItWorks, CtaBand, PlanCards, PricesPendingNotice } from "@/components/sections";
 
 export const Route = createFileRoute("/")({
-  head: () => meta(
-    "HOMI Pamplona | Servicios para estudiantes universitarios",
-    "Limpieza de pisos para estudiantes, compras, mandados y apoyo cotidiano en Pamplona. Lejos de casa, pero nunca sin apoyo.",
-    "/",
-  ),
+  head: () => {
+    const h = meta(
+      "HOMI Pamplona | Servicios para estudiantes universitarios",
+      "Limpieza de pisos para estudiantes, compras, mandados y apoyo cotidiano en Pamplona. Lejos de casa, pero nunca sin apoyo.",
+      "/",
+    );
+    return { ...h, links: [...h.links, { rel: "preload", as: "image", href: heroImage.src, type: "image/webp", fetchPriority: "high" }] };
+  },
   component: Index,
 });
 
@@ -31,7 +34,7 @@ function Index() {
         </div>
         <div className="relative">
           <div className="absolute -right-3 -top-3 size-24 rounded-full bg-sun" aria-hidden />
-          <img src={heroImage.src} alt={heroImage.alt} width={heroImage.width} height={heroImage.height}
+          <img src={heroImage.src} alt={heroImage.alt} width={heroImage.width} height={heroImage.height} fetchPriority="high" decoding="async"
             className="relative aspect-[4/3] w-full rounded-3xl object-cover shadow-xl" />
           {!heroImage.isReal && <p className="relative mt-3"><span className="pending-tag !text-sm">PENDIENTE: sustituir por fotografía real de HOMI en Pamplona</span></p>}
         </div>

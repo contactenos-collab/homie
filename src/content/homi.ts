@@ -5,7 +5,7 @@
 
 /** Número de WhatsApp Business en formato internacional SIN "+" ni espacios (ej. "34600000000").
  *  Vacío = PENDIENTE: los enlaces abren WhatsApp para elegir contacto. */
-import heroPhoto from "@/assets/hero-estudiantes.jpg";
+import heroPhoto from "@/assets/hero-estudiantes.webp";
 
 /** Foto de portada. PENDIENTE: sustituir por fotografía real de HOMI en Pamplona.
  *  Para cambiarla, cambia solo la ruta del import de arriba y pon isReal: true. */
