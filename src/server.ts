@@ -49,6 +49,12 @@ function isH3SwallowedErrorBody(body: string): boolean {
 // twice and renders garbled.
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
+    // Redirección permanente de http:// a https:// en el dominio de producción.
+    const url = new URL(request.url);
+    if (url.protocol === "http:" && (url.hostname === "www.holahomi.com" || url.hostname === "holahomi.com")) {
+      url.protocol = "https:";
+      return Response.redirect(url.toString(), 301);
+    }
     try {
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
