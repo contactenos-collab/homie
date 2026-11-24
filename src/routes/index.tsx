@@ -21,7 +21,7 @@ function Index() {
       <section className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-12 md:grid-cols-2 md:py-20">
         <div className="fade-up">
           <p className="inline-block rounded-full bg-sun/40 px-3 py-1 text-sm font-bold text-navy">📍 Pamplona · {brand.slogan}</p>
-          <h1 className="mt-5 text-5xl font-semibold md:text-6xl">Tu vida universitaria, <span className="text-accent">mucho más fácil</span></h1>
+          <h1 className="mt-5 text-5xl font-semibold md:text-6xl">Tu vida universitaria, <span className="text-accent-text">mucho más fácil</span></h1>
           <p className="mt-5 text-lg text-muted-foreground">En HOMI nos encargamos de esos pequeños y grandes detalles del día a día para que tú disfrutes tu etapa universitaria.</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link to="/servicios" className="btn btn-primary">Explorar servicios</Link>

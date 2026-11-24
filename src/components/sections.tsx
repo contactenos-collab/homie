@@ -13,7 +13,7 @@ export function ServiceCards({ detailed = false }: { detailed?: boolean }) {
           <article key={s.id} id={s.id} className="card-soft flex flex-col p-6">
             <div className="flex size-12 items-center justify-center rounded-2xl bg-sun/30 text-accent"><Icon aria-hidden /></div>
             <h3 className="mt-4 text-xl font-semibold">{s.name}</h3>
-            <p className="text-sm font-bold text-accent">{s.tagline}</p>
+            <p className="text-sm font-bold text-accent-text">{s.tagline}</p>
             <p className="mt-2 text-muted-foreground">{s.description}</p>
             {detailed && (
               <ul className="mt-4 space-y-1.5 text-sm">

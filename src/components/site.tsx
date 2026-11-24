@@ -43,8 +43,8 @@ export function SiteHeader() {
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Principal">
           {nav.map((n) => (
             <Link key={n.to} to={n.to} activeOptions={{ exact: true }}
-              className="rounded-full px-3 py-2 text-sm font-bold uppercase tracking-wide text-navy transition-colors hover:bg-secondary hover:text-accent"
-              activeProps={{ className: "!text-accent bg-secondary", "aria-current": "page" }}>{n.label}</Link>
+              className="rounded-full px-3 py-2 text-sm font-bold uppercase tracking-wide text-navy transition-colors hover:bg-secondary hover:text-accent-text"
+              activeProps={{ className: "!text-accent-text bg-secondary", "aria-current": "page" }}>{n.label}</Link>
           ))}
         </nav>
         <div className="flex items-center gap-2">
@@ -57,7 +57,7 @@ export function SiteHeader() {
       {open && (
         <nav className="border-t px-4 pb-4 lg:hidden" aria-label="Móvil">
           {nav.map((n) => (
-            <Link key={n.to} to={n.to} activeOptions={{ exact: true }} activeProps={{ className: "!text-accent" }} onClick={() => setOpen(false)} className="block border-b py-3 font-bold uppercase text-navy">{n.label}</Link>
+            <Link key={n.to} to={n.to} activeOptions={{ exact: true }} activeProps={{ className: "!text-accent-text" }} onClick={() => setOpen(false)} className="block border-b py-3 font-bold uppercase text-navy">{n.label}</Link>
           ))}
         </nav>
       )}
@@ -98,7 +98,7 @@ export function PageHero({ eyebrow, title, children }: { eyebrow: string; title:
   return (
     <section className="bg-secondary">
       <div className="fade-up mx-auto max-w-6xl px-4 py-14 md:py-20">
-        <p className="text-sm font-extrabold uppercase tracking-widest text-accent">{eyebrow}</p>
+        <p className="text-sm font-extrabold uppercase tracking-widest text-accent-text">{eyebrow}</p>
         <h1 className="mt-2 max-w-3xl text-4xl font-semibold md:text-5xl">{title}</h1>
         {children && <div className="mt-4 max-w-2xl text-lg text-muted-foreground">{children}</div>}
       </div>

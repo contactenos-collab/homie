@@ -27,6 +27,7 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-accent-text: var(--accent-text);
   --color-sun: var(--sun);
   --color-sun-foreground: var(--sun-foreground);
   --color-navy: var(--navy);
@@ -55,7 +56,9 @@
   --primary-foreground: oklch(1 0 0);
   /* Naranja #FF7900 */
   --accent: oklch(0.71 0.19 50);
-  --accent-foreground: oklch(1 0 0);
+  --accent-foreground: oklch(0.29 0.09 254);
+  /* Naranja oscuro para texto sobre fondo claro (contraste >= 4.5:1) */
+  --accent-text: #BF4A00;
   /* Amarillo #FFC400 */
   --sun: oklch(0.85 0.17 85);
   --sun-foreground: oklch(0.29 0.09 254);
