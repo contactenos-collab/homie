@@ -20,7 +20,7 @@ export const serviceIcons: Record<ServiceId, typeof Sparkles> = {
 
 export function WhatsAppButton({ message = serviceMessage(), label = "Solicitar por WhatsApp", className = "" }: { message?: string; label?: string; className?: string }) {
   return (
-    <a href={waLink(message)} target="_blank" rel="noopener noreferrer" className={`btn btn-whatsapp ${className}`}>
+    <a href={waLink(message)} target="_blank" rel="noopener noreferrer" onClick={() => (window as { plausible?: (e: string) => void }).plausible?.("WhatsApp")} className={`btn btn-whatsapp ${className}`}>
       <MessageCircle className="size-4" aria-hidden /> {label}
     </a>
   );

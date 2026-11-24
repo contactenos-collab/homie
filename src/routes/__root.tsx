@@ -88,6 +88,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    // Analítica sin cookies (Plausible): no requiere aviso de cookies.
+    scripts: [{ src: "https://plausible.io/js/script.js", defer: true, "data-domain": "holahomi.com" }],
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "icon", type: "image/png", href: "/favicon.png" },
